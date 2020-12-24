@@ -10,7 +10,6 @@ $(document).ready(() => {
         const regex = /^(0{1,})(\w)$/;
         let newDisplay = $screen.html() + $(e.currentTarget).html();
 
-        // Remove 0 at the beginning
         if (regex.test(newDisplay)) {
             newDisplay = newDisplay.replace(regex, '$2');
         }
@@ -24,14 +23,10 @@ $(document).ready(() => {
 
         let newDisplay = $screen.html() + $(e.currentTarget).html();
 
-        // Remove 2 continuous decimal points
-        // Ex: 5.. => 5.
         if (regex.test(newDisplay)) {
             newDisplay = newDisplay.replace(regex, '.');
         }
 
-        // Remove multi decimal points within a number 
-        // Ex 5.5.5. => 5.55
         if (regex2.test(newDisplay)) {
             newDisplay = newDisplay.substring(0, newDisplay.length - 1);
         }
@@ -47,10 +42,8 @@ $(document).ready(() => {
 
         if (regex.test(currentDisplay) && newOperator !== "-") {
             if (regex.test(currentDisplay[currentDisplay.length - 2])) {
-                // Case 5*-+5 => 5+5
                 newDisplay = currentDisplay.substring(0, currentDisplay.length - 2) + newOperator;
             } else {
-                // Case 5*+5 => 5+5 
                 newDisplay = currentDisplay.substring(0, currentDisplay.length - 1) + newOperator;
             }
         } else {
