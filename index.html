@@ -1,3 +1,4 @@
+p
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,88 +6,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodePen - Javascript Calculator</title>
-    <link rel="stylesheet" href="style.sass">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
-<bodyr
+<body>
     <div class="container">
-        <div class="calculator justify-content-center py-xs-5 rounded border border-dark shadow p-4 mb-4" style="background-color: #222f3e; margin:50px">
-            <div class="row px-5">
-                <div class="col p-2">
-                    <div class="text-right bg-dark border border-secondary rounded p-5 text-white h4 screen" id="display" style="background-color: #3d3d3d;">0</div>
+        <div class="calculator justify-content-center rounded border border-dark shadow p-5 mb-3" style="background-color: #222f3e; margin: 150px 250px;">
+            <div class="row">
+                <div class="col px-3">
+                    <div class="text-right bg-dark border border-secondary rounded p-4 text-white h2 screen" id="display" style="background-color: #3d3d3d;">0</div>
                 </div>
             </div>
-            <div class="row px-sm-5">
-                <div class="col-xs p-5 p-md-2">
+            <div class="row">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-danger" id="clear">C</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-secondary" id="neg">M+</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-secondary" id="percent">%</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 shadow-sm p-4 operator" id="divide" value="/" style="background-color: #fa8231; color: #ffff;">÷</button>
                 </div>
             </div>
-            <div class="row px-sm-5">
-                <div class="col p-5 p-md-2">
+            <div class="row">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="seven">7</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="eight">8</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="nine">9</button>
                 </div>
-                <div class="col p-5 p-md-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 shadow-sm p-4 operator" id="multiply" value="*" style="background-color: #fa8231; color: #ffff;">x</button>
                 </div>
             </div>
-            <div class="row px-xs-5">
-                <div class="col p-5 p-md-2">
+            <div class="row">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="four">4</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="five">5</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="six">6</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 shadow-sm p-4 operator" id="subtract" value="-" style="background-color: #fa8231; color: #ffff;">-</button>
                 </div>
             </div>
-            <div class="row px-xs-5">
-                <div class="col p-5 p-2">
+            <div class="row">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="one">1</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="two">2</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="three">3</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 shadow-sm p-4 operator" id="add" value="+" style="background-color: #fa8231; color: #ffff;">+</button>
                 </div>
             </div>
-            <div class="row px-xs-5">
-                <div class="col-3 p-5 p-2">
+            <div class="row">
+                <div class="col-3 p-3">
                     <button class="btn btn-block p-4 btn-dark number" id="zero">0</button>
                 </div>
-                <div class="col-3 p-5 p-md-2">
+                <div class="col-3 p-3">
                     <button class="btn btn-block p-4 btn-secondary decimal" id="decimal">.</button>
                 </div>
-                <div class="col p-5 p-2">
+                <div class="col p-3">
                     <button class="btn btn-block p-4 shadow-sm text-white equals" id="equals" style="background-color: #1dd1a1;">=</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
